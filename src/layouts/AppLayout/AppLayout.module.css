@@ -1,3 +1,28 @@
-/* .app-layout { /* Basic styles will go here */ } */
-/* .main-content { /* Basic styles will go here */ } */
-/* .app-footer { /* Basic styles will go here */ } */
+/* src/layouts/AppLayout/AppLayout.module.css */
+/* Assuming brand variables from src/styles/brand-styles.css are globally available */
+
+.appLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--brand-background-light, #f4f7f6); /* Default background for the whole layout */
+}
+
+.mainContent {
+  flex-grow: 1; /* Ensures this area takes up available space */
+  padding: 1.5rem; /* Padding around the main content area */
+  /* Optional: A max-width for the content area, centered */
+  /* max-width: 1200px; */
+  /* width: 100%; */
+  /* margin: 0 auto; /* Centers content if max-width is used */
+}
+
+/* Optional: Footer styling if a footer is added to AppLayout.tsx */
+/* .appFooter {
+  padding: 1rem 1.5rem;
+  background-color: var(--brand-neutral-dark, #a0a0a0);
+  color: var(--brand-text-light, #FFFFFF);
+  text-align: center;
+  font-size: 0.875rem;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.08);
+} */

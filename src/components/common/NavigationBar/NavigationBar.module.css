@@ -1,1 +1,51 @@
-/* .navigation-bar { /* Basic styles will go here */ } */
+/* src/components/common/NavigationBar/NavigationBar.module.css */
+/* Assuming brand variables from src/styles/brand-styles.css are globally available */
+
+.navigationBar {
+  background-color: var(--brand-secondary, #FFD700); /* Using brand secondary for nav */
+  padding: 0.5rem 1.5rem; /* Vertical and horizontal padding */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: flex; /* Use flex for direct children if needed, but ul will be main flex container */
+  justify-content: center; /* Center the nav list if navBar itself is wider */
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens if necessary */
+  align-items: center;
+}
+
+.navItem {
+  margin-right: 1rem; /* Spacing between nav items */
+}
+
+.navItem:last-child {
+  margin-right: 0;
+}
+
+.navLink {
+  color: var(--brand-text-dark, #333333); /* Dark text on secondary background */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.6rem 0.8rem; /* Padding for clickable area */
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.navLink:hover,
+.navLink:focus,
+.navLink.active { /* Assuming an 'active' class can be added for active links */
+  background-color: var(--brand-primary, #008080);
+  color: var(--brand-text-light, #FFFFFF);
+}
+
+.navIcon {
+  margin-right: 0.4rem; /* Space between icon and text */
+  display: inline-flex; /* Helps with vertical alignment */
+  align-items: center;
+}

@@ -1,1 +1,67 @@
-/* .app-header { /* Basic styles will go here */ } */
+/* src/components/common/Header/Header.module.css */
+/* Assuming brand variables from src/styles/brand-styles.css are globally available */
+
+.appHeader {
+  background-color: var(--brand-primary, #008080); /* Default to a fallback color */
+  color: var(--brand-text-light, #FFFFFF);
+  padding: 0.8rem 1.5rem; /* Vertical and horizontal padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: sticky; /* Make header sticky */
+  top: 0;
+  z-index: 1000; /* Ensure header is above other content */
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px; /* Adjust as needed */
+  margin-right: 0.75rem;
+}
+
+.siteTitle {
+  font-size: 1.5rem; /* ~24px if base is 16px */
+  font-weight: 700;
+  color: var(--brand-text-light, #FFFFFF);
+  text-decoration: none; /* If it's a link */
+}
+
+.navAuthSection {
+  display: flex;
+  align-items: center;
+}
+
+.userName {
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+.authLink {
+  color: var(--brand-text-light, #FFFFFF);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--brand-text-light, #FFFFFF);
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.authLink:hover,
+.authLink:focus {
+  background-color: var(--brand-text-light, #FFFFFF);
+  color: var(--brand-primary, #008080);
+}
+
+/* Example: Styles for a button if using the Button component */
+/* This would apply if you imported and used the Button component in Header.tsx */
+/* .loginButton { */
+  /* Styles for the button, e.g., if it's an outline variant on a dark background */
+  /* --button-outline-color: var(--brand-text-light, #FFFFFF); */
+  /* --button-outline-hover-bg: var(--brand-text-light, #FFFFFF); */
+  /* --button-outline-hover-text: var(--brand-primary, #008080); */
+/* } */

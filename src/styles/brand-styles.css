@@ -4,6 +4,11 @@
   --brand-accent-green: #4CAF50;
   --brand-accent-pink: #E91E63;
   --brand-accent-purple: #6A2C70; 
+  --brand-text-dark: #333333;
+  --brand-text-light: #FFFFFF;
+  --brand-background-light: #f4f7f6;
+  --brand-neutral-light: #e0e0e0;
+  --brand-neutral-dark: #a0a0a0;
 }
 
 /* 

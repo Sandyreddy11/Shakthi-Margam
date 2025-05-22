@@ -1,0 +1,73 @@
+/* Assuming brand variables from src/styles/brand-styles.css are globally available */
+
+html {
+  font-size: 100%; /* Base for rem units */
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Common sans-serif stack */
+  color: var(--brand-text-dark, #333333); /* Default text color */
+  background-color: var(--brand-background-light, #f4f7f6); /* Default background color */
+  line-height: 1.5; /* Default line height for readability */
+  -webkit-font-smoothing: antialiased; /* Smooth fonts on WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Smooth fonts on Firefox */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  font-weight: 600;
+  color: var(--brand-primary, #008080); /* Using brand primary color for headings */
+  line-height: 1.2;
+}
+
+h1 { font-size: 2.5rem; } /* 40px if base is 16px */
+h2 { font-size: 2rem; }   /* 32px */
+h3 { font-size: 1.75rem; }/* 28px */
+h4 { font-size: 1.5rem; } /* 24px */
+h5 { font-size: 1.25rem; }/* 20px */
+h6 { font-size: 1rem; }   /* 16px */
+
+/* Links */
+a {
+  color: var(--brand-primary, #008080); /* Using brand primary color for links */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+}
+
+a:hover, a:focus {
+  color: var(--brand-accent-purple, #6A2C70); /* Using accent purple for hover/focus */
+  text-decoration: underline;
+}
+
+/* Basic responsive typography */
+@media (max-width: 768px) {
+  html {
+    font-size: 90%; /* Adjust base font size for smaller screens */
+  }
+
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.55rem; }
+  h4 { font-size: 1.35rem; }
+}
+
+/* Utility class for visually hidden content, useful for accessibility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
