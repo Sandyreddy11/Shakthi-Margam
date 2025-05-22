@@ -1,0 +1,112 @@
+/* Assuming brand variables from src/styles/brand-styles.css are globally available */
+/* :root {
+  --brand-primary: #008080;
+  --brand-secondary: #FFD700;
+  --brand-accent-pink: #E91E63;
+  --brand-accent-purple: #6A2C70; 
+  --brand-text-light: #FFFFFF;
+  --brand-text-dark: #212121; 
+} */
+
+.button {
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit; /* Assuming a global font is set */
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  display: inline-flex; /* Helps with aligning items if children include icons */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* In case it's used as an anchor tag styled as a button */
+  line-height: 1.5; /* Consistent line height */
+}
+
+/* Variants */
+.primary {
+  background-color: var(--brand-primary);
+  color: var(--brand-text-light, #FFFFFF); /* Fallback if variable not defined */
+}
+
+.primary:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--brand-primary) 85%, black);
+}
+
+.primary:focus {
+  outline: 2px solid color-mix(in srgb, var(--brand-primary) 50%, white);
+  outline-offset: 2px;
+}
+
+.secondary {
+  background-color: var(--brand-secondary);
+  color: var(--brand-text-dark, #212121); /* Fallback */
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--brand-secondary) 85%, black);
+}
+
+.secondary:focus {
+  outline: 2px solid color-mix(in srgb, var(--brand-secondary) 50%, black);
+  outline-offset: 2px;
+}
+
+.accent {
+  background-color: var(--brand-accent-pink);
+  color: var(--brand-text-light, #FFFFFF); /* Fallback */
+}
+
+.accent:hover:not(:disabled) {
+  background-color: color-mix(in srgb, var(--brand-accent-pink) 85%, black);
+}
+
+.accent:focus {
+  outline: 2px solid color-mix(in srgb, var(--brand-accent-pink) 50%, white);
+  outline-offset: 2px;
+}
+
+.outline {
+  background-color: transparent;
+  border: 2px solid var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+.outline:hover:not(:disabled) {
+  background-color: var(--brand-primary);
+  color: var(--brand-text-light, #FFFFFF); /* Fallback */
+}
+
+.outline:focus {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 1px;
+}
+
+/* Sizes */
+.small {
+  padding: 0.4em 0.8em;
+  font-size: 0.875rem; /* 14px if base is 16px */
+}
+
+.medium {
+  padding: 0.6em 1.2em;
+  font-size: 1rem; /* 16px if base is 16px */
+}
+
+.large {
+  padding: 0.8em 1.5em;
+  font-size: 1.125rem; /* 18px if base is 16px */
+}
+
+/* States */
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Full Width */
+.fullWidth {
+  width: 100%;
+  display: block; /* Or flex if you need to center content */
+}

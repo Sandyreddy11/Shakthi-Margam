@@ -1,0 +1,63 @@
+/* Assuming brand variables from src/styles/brand-styles.css are globally available */
+/* :root {
+  --brand-primary: #008080;
+  --brand-secondary: #FFD700;
+  --brand-accent-pink: #E91E63;
+  --brand-accent-purple: #6A2C70; 
+  --brand-text-light: #FFFFFF;
+  --brand-text-dark: #212121; 
+  --brand-neutral-light: #f4f4f4; 
+  --brand-neutral-dark: #333333;
+} */
+
+.card {
+  background-color: var(--brand-text-light, #FFFFFF); /* Default to white */
+  border: 1px solid var(--brand-neutral-light, #e0e0e0); /* Light gray border */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Softer shadow */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Ensures child elements adhere to border-radius */
+  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.cardHeader {
+  padding: 1rem 1.25rem;
+  font-size: 1.25rem; /* 20px if base is 16px */
+  font-weight: 600;
+  color: var(--brand-primary, #008080); /* Use primary brand color for header text */
+  border-bottom: 1px solid var(--brand-neutral-light, #e0e0e0);
+  /* Optional: Subtle pattern background for header - uncomment if brand-styles.css is globally available and pattern is desired
+  /* background-image: var(--pattern-pochampally-light); /* Assuming pattern is defined in brand-styles.css */
+  /* background-size: cover; */
+}
+
+.cardBody {
+  padding: 1.25rem;
+  flex-grow: 1; /* Ensures body takes available space */
+  color: var(--brand-neutral-dark, #333333);
+  line-height: 1.6;
+}
+
+.cardFooter {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem; /* 14px if base is 16px */
+  color: var(--brand-neutral-dark, #555555);
+  border-top: 1px solid var(--brand-neutral-light, #e0e0e0);
+  background-color: var(--brand-neutral-light, #f9f9f9); /* Slightly different background for footer */
+}
+
+/* Interactive Variant */
+.interactive {
+  /* Default state is already defined in .card */
+}
+
+.interactive:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--brand-accent-purple, #6A2C70); /* Accent color border on hover */
+}
+
+/* Default variant (not strictly necessary if .card is the base) */
+.default {
+  /* Can add specific styles for default if it ever needs to differ beyond the base .card */
+}
