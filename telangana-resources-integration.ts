@@ -139,6 +139,7 @@ export function getSuccessStories(query: { industry?: string, location?: string 
 export function getPersonalizedRecommendations(profile: {
   industry: string;
   businessStage: string;
+  businessType: string;
   location: string;
   challenges: string[];
 }) {
@@ -152,7 +153,7 @@ export function getPersonalizedRecommendations(profile: {
     
     marketTrends: getRelevantMarketTrends(profile.industry).slice(0, 2),
     
-    regulations: getRelevantRegulations(profile.industry).slice(0, 2),
+    regulations: getRelevantRegulations(profile.businessType).slice(0, 2),
     
     successStories: getSuccessStories({
       industry: profile.industry,
