@@ -38,7 +38,7 @@ Shakti Margam is an AI-powered platform designed to support women entrepreneurs 
 1. Clone the repository:
    ```
    git clone https://github.com/Sanjureddy1007/Shakthi-Margam.git
-   cd shakti-margam
+   cd Shakthi-Margam
    ```
 
 2. Install dependencies:
@@ -91,7 +91,6 @@ This will process the data in the `src/data` directory and upload it to your vec
 
 ```
 shakti-margam/
-├── docs/                    # Documentation files
 ├── public/                  # Public assets
 ├── src/
 │   ├── components/          # React components
@@ -117,9 +116,7 @@ shakti-margam/
 │   ├── styles/              # Global styles
 │   └── types/               # TypeScript type definitions
 ├── .env.example             # Example environment variables
-├── package.json             # Project dependencies
 ├── vercel.json              # Vercel deployment configuration
-└── tsconfig.json            # TypeScript configuration
 ```
 
 ## Admin Dashboard
