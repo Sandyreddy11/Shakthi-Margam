@@ -1,0 +1,17 @@
+{
+  "name": "shakthi-margam",
+  "version": "1.0.0",
+  "description": "Shakti Margam is an AI-powered platform designed to support women entrepreneurs in Telangana, India. The platform provides personalized guidance, resources, and tools to help women start and grow their businesses.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.1",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
+  }
+}
