@@ -216,6 +216,7 @@ export const telanganaIndustryInsights: IndustryInsight[] = [
   }
 ];
 
+
 export const telanganaMarketTrends: MarketTrend[] = [
   {
     id: "digital-adoption",
