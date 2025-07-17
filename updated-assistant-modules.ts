@@ -84,4 +84,34 @@ export const assistantModules: AssistantModule[] = [
     ],
     previewImage: "/images/customer_persona.png"
   }
+  {
+    id: "mentorship-networking",
+    title: "Mentorship & Networking",
+    description: "Connect with experienced mentors and peers to accelerate your growth.",
+    icon: "user-group",
+    color: "accent5",
+    features: [
+      "Mentor matching",
+      "Event calendar integration",
+      "Community discussion forums",
+      "Collaboration opportunities",
+      "Resource sharing"
+    ],
+    previewImage: "/images/mentorship_networking.png"
+  },
+  {
+    id: "ecommerce-enablement",
+    title: "E-commerce Enablement",
+    description: "Tools and guidance for launching and scaling your online store.",
+    icon: "shopping-cart",
+    color: "accent6",
+    features: [
+      "Platform setup guides",
+      "Payment gateway integration",
+      "Logistics recommendations",
+      "Inventory management tips",
+      "Digital marketing best practices"
+    ],
+    previewImage: "/images/ecommerce_module.png"
+  },
 ];
